@@ -16,3 +16,15 @@ p{
   letter-spacing: 10px;
   line-height: 2;
 }
+
+#absolute{
+  height: 100px;
+  width: 500px;
+  background-color: blueviolet;
+}
+
+.relative{
+  height: 30vh;
+  width: 50vw;
+  background-color: crimson;
+}
