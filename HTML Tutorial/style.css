@@ -80,5 +80,44 @@ p{
   width: 150px;
   height: 100px;
   border: 3px solid blue;
-  background-image: linear-gradient(to top right, #2196f3, #9c27b0, #673ab7);
+  /* background-image: linear-gradient(to top right, #2196f3, #9c27b0, #673ab7); */
+}
+
+.main-container{
+  height: 60vh;
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  justify-content: start;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.item{
+  width: 100px;
+  height: 100px;
+  border: 3px solid blueviolet;
+}
+
+@media screen and (max-width : 500px) {
+  body{
+    background-color : red;
+  }
+
+  .item{
+    border: 3px solid #ffeb3b;
+  }
+}
+
+
+@media screen and (min-width : 500px) and (max-width : 800px) {
+  body{
+    background-color : rgb(217, 0, 255);
+  }
+
+  .item{
+    border: 3px solid #3bff48;
+  }
 }
