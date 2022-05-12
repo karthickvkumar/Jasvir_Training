@@ -50,4 +50,45 @@ var studentInfo = {
   location : "chennai"
 };
 
-console.log(studentInfo)
+console.log(studentInfo);
+
+// Object -> 4 operation = read value, insert new value, edit exisiting value, delete existing value. 
+
+// To Read a Value -> object_variable_name.key;
+// way-1 - Static key (If we know the key value, we can use this approach)
+console.log(studentInfo.first_name);
+
+// To Read a Value -> object_variable_name[key];
+// way-2 - Dynamic key (If we dont know the key value, we can use this approach)
+var key = "last_name";
+console.log(studentInfo[key]);
+
+// To Insert a new Value -> object_variable_name.newKey = value;
+studentInfo.blood_group = "A +ve";
+
+// To Edit/Updated an exisiting value -> object_variable_name.existing_key = new_value;
+studentInfo.first_name = "Jasvir";
+
+// To delete a existing Record -> delete object_variable_name.key
+delete studentInfo.roll_number;
+
+console.log(studentInfo);
+
+// Function -> Block of Code 
+// Syntax for Creating a Function (Function Definition)
+
+// function function_name(var1, var2, ... , varN){ // arguments
+//   // code block
+// }
+
+// function_name -> It should be a Proper text value -> a-z, A-Z, 0-9, $, _
+
+function addition(num1, num2){
+  // var num1 = 100;
+  // var num2 = 200;
+  var result = num1 + num2;
+  console.log(result);
+}
+
+// Syntax for Executing/Running the Function (Function Invocation)
+// function_name(value1, value2, ... ,valueN); // parameter
