@@ -92,3 +92,68 @@ function addition(num1, num2){
 
 // Syntax for Executing/Running the Function (Function Invocation)
 // function_name(value1, value2, ... ,valueN); // parameter
+
+// Array -> It is a collection of List data
+// Syntax of creating an Array
+
+// var variable_name = [ value_1, value_2, ... , Value_n ];
+
+// value -> Number, String, Boolean, Object, Array, Function
+
+var list_of_mark = [70, 64, 94, 88, 45, 70, 64, 94, 88, 45];
+
+var name_list = ["asdfsadf", "reer", "dfbdf", "rtyrh"];
+
+var studentList = [
+  { name : "Karthick", age : 24},
+  {name : "Ak", age : 20},
+  { name : "Yuvi", age : 25}
+];
+
+// Operation in Array -> 4 Operation = Insert a new value, Read the Value, Edit the exiting value, Delete the value
+
+// Insert a new value into Array
+
+// push() - Insert a new value at the end of array record
+// array_variable_name.push(value_1, value_2, ... , value_n);
+
+studentList.push({name: "Kumar", age: 28}, {name: "YK", age: 27})
+console.log(studentList.length);
+
+// unshift() -> Insert a new value at the start of array record
+// array_variable_name.unshift(value_1, value_2, ... , value_n);
+
+studentList.unshift({name : "Zyan", age : 29});
+console.log(studentList);
+
+// To Read value from Array
+// array_variable_name[index]
+
+console.log(studentList[2].name);
+
+// To edit a existing value from Array
+// array_variable_name[index] = value;
+
+studentList[2] = { name : "Smith", age : 30};
+// studentList[2].name = "Smith";
+// studentList[2].age = 30;
+
+
+// To delete value from Array
+
+// way-1
+// pop() - It is used to remove value at the end of array record
+// array_variable_name.pop()
+studentList.pop();
+
+
+//way-2
+// shift() - It is used to remove value at the start of array record
+// array_variable_name.shift()
+studentList.shift();
+
+//way-3 
+// splice(index, deleteCount) - It will remove value at middle or any position of array
+studentList.splice(2, 1);
+
+console.log(studentList);
