@@ -269,3 +269,116 @@ function check_even_numbers(){
     }
   }
 }
+
+/*Syntax - for in (loop) - Used to iterate Object properties
+for(var key in object_variable_name){
+ // coding
+}
+*/
+
+function iterateForInLoop(){
+  var employee = {
+    first_name : "Karthick",
+    last_name : "kumar",
+    father_name : "Xyz",
+    age : 27,
+    status : true
+  };
+
+  for(var key in employee){
+    if(key === "first_name"){
+      console.log(key, employee[key]);
+    }
+  }
+}
+
+/*
+Syntax - for of (loop) - Used to iterate list of Array
+for(var value of array_variable_name){
+ // coding
+}
+*/
+
+function iterateForOfLoop(){
+  var studentList = [
+    { name : "mr.abc", age : 24},
+    { name : "mr.xyz", age : 20},
+    { name : "mr.uio", age : 25}
+  ];
+  for(var value of studentList){
+    console.log(value.name);
+  }
+
+  // console.log(studentList[1].name)
+}
+
+/*Syntax - While (loop) - Entry level check
+while(condition){
+ // loop code block
+}
+*/
+
+function whileLoop(){
+  var count = 1;
+  while(count <= 5){
+    console.log("The count is ", count);
+    count = count + 1;
+  }
+}
+
+/*
+Syntax - do While (loop) - Exit Level Check
+do{
+ // code block      
+}while(condition);
+*/
+
+function doWhileLoop(){
+  var count = 6;
+  do{
+    console.log("The count is ", count);
+    count = count + 1;
+  }while(count <= 5);
+}
+
+/*Syntax - Switch Case
+switch(expression){
+  case value :
+    // code block
+    break;
+  case value :
+    // code block
+    break;
+  default:
+    //code block
+}
+*/
+
+function findDay(){
+  var day = prompt("Enter any number 0 to 6" );
+  switch(day){
+    case "0":
+      console.log("Sunday");
+      break;
+    case "1":
+      console.log("Monday");
+      break;  
+    case "2":
+      console.log("Tuesday");
+      break;
+    case "3":
+      console.log("Wednesday");
+      break;
+    case "4":
+      console.log("Thursday");
+      break;  
+    case "5":
+      console.log("Friday");
+      break;
+    case "6":
+      console.log("Saturday");
+      break;
+    default:
+      console.log("No Number match found");
+  }
+}
