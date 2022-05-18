@@ -382,3 +382,63 @@ function findDay(){
       console.log("No Number match found");
   }
 }
+
+function display(){
+  // Local Scope - Defning a Variable inside a Function
+  // Accessibilty - With in the Function
+  var user_name = "Karthick Kumar";
+  console.log(user_name);
+  
+  // Global Scope - Defining a variable Outside a Function 
+  // Accessibility - Use it inside any Funtion
+  console.log(email_id);
+
+  // Automatic Global Scope - Defining a variable declaration outside a funciton, but assgning value inside a function
+  // Accessibility - Use it inside any Funtion
+  future_value = "Future generated value";
+  console.log(future_value); 
+  
+}
+
+function printText(){
+  // Local Scope - Defning a Variable inside a Function
+   console.log(user_name);
+  
+  // Global Scope - Defining a variable Outside a Function 
+  console.log(email_id);
+
+  // Automatic Global Scope - Defining a variable declaration outside a funciton, but assgning value inside a function
+  console.log(future_value); 
+}
+
+function calculator(){
+  try{
+    var a = prompt("Enter any number value 1");
+    var value_1 = parseInt(a);
+    var b = prompt("Enter any number value 2");
+    var value_2 = parseInt(b);
+    var symbol = prompt("Enter any math operator symbol");
+    
+    switch(symbol){
+      case "+" :
+        console.log(value_1 + value_2);
+        break;
+      case "-":
+        console.log(value_1 - value_3);
+        break;
+      case "*":
+        console.log(value_1 * value_2);
+        break;
+      case "/":
+        console.log(value_1 / value_2);
+        break;
+      default: 
+        console.log("You have entered a worng symbol")
+    }
+  }
+  catch(err){
+    console.log(err);
+    alert("Something went wrong, pls contact admin");
+  }
+  
+}
