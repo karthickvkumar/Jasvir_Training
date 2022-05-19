@@ -442,3 +442,28 @@ function calculator(){
   }
   
 }
+
+// Local Storage - Storing a value in browser memory, max size is 10mb. It is permanent storage
+// Set a new value, Read a value, Delete particular value
+
+// Set a new value into Local Storage
+// synax : localStorage.setItem("key", "value");
+
+localStorage.setItem("username", "karthick@gmail.com");
+localStorage.setItem("userage", 28);
+localStorage.setItem("userstatus", true);
+localStorage.setItem("direct-object-value", studentInfo);
+
+// To convert an Object or Array to String Value
+// JSON.stringify(Object or Array Value);
+var string = JSON.stringify(studentInfo);
+localStorage.setItem("string-value", string);
+
+// Read a value
+// syntax : localStorage.getItem("key");
+localStorage.getItem("username");
+
+// To convert an String Format Object or Array to Actual Value
+// JSON.parse(string)
+var str = localStorage.getItem("string-value");
+console.log(JSON.parse(str));
