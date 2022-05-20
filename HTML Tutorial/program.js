@@ -467,3 +467,68 @@ localStorage.getItem("username");
 // JSON.parse(string)
 var str = localStorage.getItem("string-value");
 console.log(JSON.parse(str));
+
+//syntax - Remove a particular value
+// localStorage.removeItem(key);
+
+// localStorage.removeItem("userInfo");
+
+// syntax - To clear all values
+localStorage.clear();
+
+
+// Session Storage - Storing a value in browser memory, max size is 10mb. It is temporary storage (whenever we close the browser tab, values will be cleard)
+
+// Session Storage -> Set a new value, Read a value, Delete particular value
+
+// syntax -> Set a new value
+// sessionStorage.setItem("key", "value")
+
+sessionStorage.setItem("user-name", "Karthick@gmail.com");
+
+// syntax -> Read a value
+// sessionStorage.getItem("key");
+sessionStorage.getItem("user-name");
+
+//syntax - Remove a particular value
+// sessionStorage.removeItem("key");
+
+//syntax - To clear all values
+sessionStorage.clear();
+
+// Timers
+/*
+setTimeout - Its used to delay the code excution
+syntax:
+
+setTimeout(function(){
+ // code block - to delay execution
+}, time_millisecond);
+
+1000 ms -> 1 second
+*/
+
+var timeOut = setTimeout(function(){
+  alert("Welcome to Home Page");
+}, 1000 * 5);
+
+// clearTimeout -> It will stop the setTimeout
+clearTimeout(timeOut);
+
+/*
+setInterval -> It is used to run a code on the given time interval
+syntax:
+setInterval(function(){
+  // code to be excuted on a time interval
+}, time_millisecond);
+*/
+
+var timeInterval = setInterval(function(){
+  alert("It will call continiously for every 4 second");
+}, 4000);
+
+// clearInterval -> It will stop the time interval
+
+function stopTimeInterval(){
+  clearInterval(timeInterval);
+}
