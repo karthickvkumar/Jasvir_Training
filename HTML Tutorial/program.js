@@ -518,13 +518,13 @@ clearTimeout(timeOut);
 /*
 setInterval -> It is used to run a code on the given time interval
 syntax:
-setInterval(function(){
+setInterval(function(){  // anonymous or callback function 
   // code to be excuted on a time interval
 }, time_millisecond);
 */
 
 var timeInterval = setInterval(function(){
-  alert("It will call continiously for every 4 second");
+  // alert("It will call continiously for every 4 second");
 }, 4000);
 
 // clearInterval -> It will stop the time interval
@@ -532,3 +532,59 @@ var timeInterval = setInterval(function(){
 function stopTimeInterval(){
   clearInterval(timeInterval);
 }
+
+//Property of Array (Inbuilt Array Functionality)
+var list = [
+  {name : "mr.abc", age : 21},
+  {name : "mr.cde", age : 22},
+  {name : "mr.fgh", age : 23},
+  {name : "mr.ijk", age : 24},
+  {name : "mr.lmn", age : 25}
+]; 
+
+// To verify an array is empty or not
+list.length; //0 - Array is empty
+
+// To Find Index in Array
+// arrayVariableName.findIndex(function(value) {
+//   return value.key === "value"
+// });
+
+var index = list.findIndex(function(key){
+  return key.name === "mr.ijk";
+});
+
+// To Iterate (Loop) an Array
+// 1.	forEach - forEach don't return anything. It just runs the callback function for each element of the array.
+
+// array_variable_name.forEach(function(value, indexNumber){
+//   // value, index each item in array
+// });
+
+list.forEach(function(value, index){
+  console.log(value, index);
+});
+
+// 2. Map - It returns new array by executing the callback function for each elements of the array
+ 
+//var output = array_variable_name.map(function(value, indexNumber){
+//   console.log(value, index);
+//   return; 
+// });
+
+var output = list.map(function(value, index){
+  console.log(value, index);
+  return value.name;
+});
+
+// 3.	Filter - If the condition is true for an element, element is picked for the return array
+ 
+//var output = array_variable_name.filter(function(value, indexNumber){
+//   console.log(value, indexNumber);
+//   return condition; 
+// });
+
+var output = list.filter(function(value, indexNumber){
+  console.log(value, indexNumber);
+  return value.score < 35;
+});
