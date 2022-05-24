@@ -550,8 +550,8 @@ list.length; //0 - Array is empty
 //   return value.key === "value"
 // });
 
-var index = list.findIndex(function(key){
-  return key.name === "mr.ijk";
+var index = list.findIndex(function(value){
+  return value.name === "mr.ijk";
 });
 
 // To Iterate (Loop) an Array
@@ -588,3 +588,53 @@ var output = list.filter(function(value, indexNumber){
   console.log(value, indexNumber);
   return value.score < 35;
 });
+
+
+//ES5 - Function Scope 
+// var variable_name = value;
+
+//ES6 -  Block level Scope - { }
+// const variable_name = value;
+// let variable_name = value;
+
+// Local Scope - Function & Block level Scope
+
+function dispaly(){
+  if(true){
+    var number1 = 100;
+    let number2 = 200;
+
+    console.log(number1);   
+    console.log(number2);  
+  }
+
+  console.log(number1);  
+  console.log(number2);   
+}
+
+//ES5
+// function function_name(){
+//   // code
+// }
+
+// function(){
+
+// }
+
+//ES6
+
+// const function_name = () => {
+
+// }
+
+// () => { 
+
+// }
+
+//Ternary Operator
+// condition ? exp 1 : exp 2
+
+// Spread Operator ( ... )
+
+// To combine Array - [...arr1, ...arr2]
+// To combine Object - {...obj1, ...obj2}
