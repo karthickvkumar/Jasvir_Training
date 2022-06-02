@@ -6,19 +6,23 @@ class LoginActionComponent extends Component{
     super();
   }
 
+  loginSubmit(){
+    alert("Form is submitted");
+  }
+
   render(){
     return(
       <div>
         <div>
-          <label>Enter your Email Id</label>
-          <input type="text" placeholder="Enter your email id"/>
+          <label className="label">Enter your Email Id</label>
+          <input type="text" className="inputbox" placeholder="Enter your email id"/>
         </div>
-        <div>
-          <label>Enter your Password</label>
-          <input type="password" placeholder="Enter your password" />
+        <div className="space">
+          <label className="label">Enter your Password</label>
+          <input type="password" className="inputbox" placeholder="Enter your password" />
         </div>
-        <div>
-          <button>Login</button>
+        <div className="space">
+          <button onClick={() => this.loginSubmit() }>Login</button>
         </div>
       </div>
     )

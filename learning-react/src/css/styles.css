@@ -1,0 +1,14 @@
+.label{
+  font-size: 20px;
+  display: inline-block;
+  width: 200px;
+}
+
+.inputbox{
+  font-size: 18px;
+  width: 250px;
+}
+
+.space{
+  margin-top: 10px;
+}
