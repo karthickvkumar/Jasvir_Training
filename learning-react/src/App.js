@@ -1,6 +1,7 @@
 import HeaderComponent from "./components/header";
 import LoginActionComponent from "./components/login-action";
 import ResetAccountComponent from "./components/reset-account";
+import ConditionalViewComponent from "./components/conditional-view";
 
 import "./css/styles.css";
 
@@ -11,6 +12,7 @@ function App() {
       <HeaderComponent></HeaderComponent>
       <LoginActionComponent></LoginActionComponent>
       <ResetAccountComponent></ResetAccountComponent>
+      <ConditionalViewComponent></ConditionalViewComponent>
     </div>
   );
 }

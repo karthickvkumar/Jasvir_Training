@@ -12,3 +12,9 @@
 .space{
   margin-top: 10px;
 }
+
+.eye-icon{
+  width: 35px;
+  margin-left: 15px;
+  cursor: pointer;
+}
