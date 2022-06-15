@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {NavLink} from "react-router-dom";
 
 class LoginActionComponent extends Component{
 
@@ -33,6 +34,7 @@ class LoginActionComponent extends Component{
         <div className="space">
           <button onClick={() => this.loginSubmit()}>Login</button>
         </div>
+        <NavLink to="/">Go to Home Page</NavLink>
       </div>
     )
   }
