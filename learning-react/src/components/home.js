@@ -14,6 +14,8 @@ const HomeComponent = () => {
       <h1>This is a Home Page</h1>
        <h1>Linking Pages - Way 1 (Via HTML Tag)</h1>
        <NavLink to="/login">Login Page</NavLink>
+       <br></br>
+       <NavLink to="/mail">Go to Mail View</NavLink>
       
        <h1>Linking Pages - Way 2 (Via Function)</h1>
        <button onClick={() => goToResetPage()}>Go to Reset Page</button>

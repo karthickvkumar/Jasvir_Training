@@ -6,6 +6,11 @@ import LoginActionComponent from "./components/login-action";
 import ResetAccountComponent from "./components/reset-account";
 import ConditionalViewComponent from "./components/conditional-view";
 import HomeComponent from "./components/home";
+import MailView from "./components/mail";
+
+import InboxComponent from "./components/nested components/inbox";
+import TrashComponent from "./components/nested components/trash";
+import StarredComponent from "./components/nested components/starred";
 
 import "./css/styles.css";
 
@@ -17,6 +22,11 @@ function App() {
         <Route path="login" element={<LoginActionComponent></LoginActionComponent>}></Route>
         <Route path="reset" element={<ResetAccountComponent></ResetAccountComponent>}></Route>
         <Route path="conditional" element={<ConditionalViewComponent></ConditionalViewComponent>}></Route>
+        <Route path="mail" element={<MailView></MailView>}>
+           <Route path="inbox" element={<InboxComponent></InboxComponent>}></Route>
+           <Route path="trash" element={<TrashComponent></TrashComponent>}></Route>
+           <Route path="starred" element={<StarredComponent></StarredComponent>}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

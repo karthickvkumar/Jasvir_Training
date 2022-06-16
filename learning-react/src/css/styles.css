@@ -18,3 +18,29 @@
   margin-left: 15px;
   cursor: pointer;
 }
+
+.mail-wrapper{
+  height: 98vh;
+}
+
+.mail-header{
+  height: 10%;
+  border: 3px solid red;
+}
+
+.content-section{
+  height: 90%;
+  border: 2px solid red;
+  display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+  width: 20%;
+    border: 3px solid red;
+}
+
+.middle-section{
+  width: 80%;
+    border: 3px solid red;
+}
