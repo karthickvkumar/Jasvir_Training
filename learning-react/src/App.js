@@ -11,6 +11,7 @@ import MailView from "./components/mail";
 import InboxComponent from "./components/nested components/inbox";
 import TrashComponent from "./components/nested components/trash";
 import StarredComponent from "./components/nested components/starred";
+import LoginFormComponent from "./components/nested components/login";
 
 import "./css/styles.css";
 
@@ -26,6 +27,7 @@ function App() {
            <Route path="inbox" element={<InboxComponent></InboxComponent>}></Route>
            <Route path="trash" element={<TrashComponent></TrashComponent>}></Route>
            <Route path="starred" element={<StarredComponent></StarredComponent>}></Route>
+           <Route path="login" element={<LoginFormComponent></LoginFormComponent>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
