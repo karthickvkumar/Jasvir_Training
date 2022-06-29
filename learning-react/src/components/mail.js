@@ -15,6 +15,8 @@ const MailView = () => {
           <br></br>
           <NavLink to="/mail/login">Login Page</NavLink>
           <br></br>
+          <NavLink to="/mail/update">Update Page</NavLink>
+          <br></br>
         </div>
         <div className="middle-section">
           <Outlet></Outlet>

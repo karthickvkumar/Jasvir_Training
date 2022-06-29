@@ -12,6 +12,7 @@ import InboxComponent from "./components/nested components/inbox";
 import TrashComponent from "./components/nested components/trash";
 import StarredComponent from "./components/nested components/starred";
 import LoginFormComponent from "./components/nested components/login";
+import UpdateForm from "./components/nested components/update-form";
 
 import "./css/styles.css";
 
@@ -28,6 +29,7 @@ function App() {
            <Route path="trash" element={<TrashComponent></TrashComponent>}></Route>
            <Route path="starred" element={<StarredComponent></StarredComponent>}></Route>
            <Route path="login" element={<LoginFormComponent></LoginFormComponent>}></Route>
+           <Route path="update" element={<UpdateForm></UpdateForm>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

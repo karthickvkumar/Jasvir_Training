@@ -5,6 +5,7 @@ const InboxComponent = () => {
 
   const [userList, setUserList] = useState([]);
 
+
   const loadUsers = () => {
     const url = "https://reqres.in/api/users?page=2";
 
@@ -18,6 +19,20 @@ const InboxComponent = () => {
         });
   }
 
+  const deleteUser = (id, index) => {
+    let url = "https://reqres.in/api/users/" + id;
+    
+    axios.delete(url)
+      .then((success) => {
+        console.log(success);
+        userList.splice(index, 1);
+        setUserList(previous => (userList));
+      })
+      .catch((failure) => {
+        console.log(failure);
+      })
+  }
+
   const profiles = userList.map((value, index) => {
     return(
       <tr key={index}>
@@ -27,6 +42,9 @@ const InboxComponent = () => {
         <td>{value.email}</td>
         <td>
           <img src={value.avatar} />
+        </td>
+        <td>
+          <button onClick={() => deleteUser(value.id, index)}>Delete</button>
         </td>
       </tr>
     )
@@ -44,6 +62,7 @@ const InboxComponent = () => {
             <th>Last Name</th>
             <th>Email ID</th>
             <th>Avatar</th>
+            <th>Select</th>
           </tr>
         </thead>
         <tbody>
