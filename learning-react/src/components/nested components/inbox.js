@@ -26,7 +26,7 @@ const InboxComponent = () => {
       .then((success) => {
         console.log(success);
         userList.splice(index, 1);
-        setUserList(previous => (userList));
+        setUserList(() => [...userList]);
       })
       .catch((failure) => {
         console.log(failure);

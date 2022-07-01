@@ -14,6 +14,8 @@ import StarredComponent from "./components/nested components/starred";
 import LoginFormComponent from "./components/nested components/login";
 import UpdateForm from "./components/nested components/update-form";
 
+import RegisterAccount from "./components/register-account";
+
 import "./css/styles.css";
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
            <Route path="login" element={<LoginFormComponent></LoginFormComponent>}></Route>
            <Route path="update" element={<UpdateForm></UpdateForm>}></Route>
         </Route>
+        <Route path="register" element={<RegisterAccount></RegisterAccount>}></Route>
       </Routes>
     </BrowserRouter>
   );
