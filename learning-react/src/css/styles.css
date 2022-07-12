@@ -68,3 +68,8 @@
   background-color: #04AA6D;
   color: white;
 }
+
+.error-msg{
+  color: red;
+  margin-left: 200px;
+}
